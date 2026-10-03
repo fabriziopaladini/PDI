@@ -13,8 +13,8 @@ def ecualizacion_local(imagen, M, N):
     """
     if not (isinstance(M, int) and isinstance(N, int)) or M <= 0 or N <= 0:
         raise ValueError("M y N deben ser enteros positivos")
-    if M % 2 == 0 or N % 2 == 0:
-        raise ValueError("M y N deben ser impares para que la ventana tenga un píxel central")
+    # Si M o N son pares no hay un píxel central exacto: se toma M//2 (o N//2) y la ventana
+    # queda corrida un píxel hacia arriba (o a la izquierda)
 
     salida = imagen.copy()
     fila_central = M // 2
