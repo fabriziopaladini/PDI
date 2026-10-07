@@ -40,8 +40,6 @@ pip install opencv-contrib-python==5.0.0.93 numpy==2.5.3 matplotlib==3.11.2
 .
 ├── TP1.py                        # Problema 1
 ├── TP1b.py                       # Problema 2
-├── Imagen_con_detalles_escondidos.tif           # imagen de entrada del Problema 1
-├── grade_sheet_1.png ... grade_sheet_4.png      # planillas de entrada del Problema 2
 ├── README.md
 ├── TUIA_PDI_TP1_2026_C2.pdf      # enunciado del TP
 └── informe/
@@ -50,7 +48,7 @@ pip install opencv-contrib-python==5.0.0.93 numpy==2.5.3 matplotlib==3.11.2
 
 ## Imágenes de entrada
 
-Las imágenes de entrada provistas por la cátedra están en la carpeta raíz del repositorio, junto a los scripts:
+Las imágenes de entrada no se incluyen en el repositorio. Son las provistas por la cátedra y, antes de ejecutar los scripts, hay que copiarlas en la carpeta raíz, junto a `TP1.py` y `TP1b.py`, con estos nombres:
 
 - Problema 1: `Imagen_con_detalles_escondidos.tif`
 - Problema 2: `grade_sheet_1.png`, `grade_sheet_2.png`, `grade_sheet_3.png` y `grade_sheet_4.png`
