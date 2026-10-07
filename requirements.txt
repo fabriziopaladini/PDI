@@ -1,6 +1,0 @@
-numpy
-pandas
-matplotlib
-opencv-contrib-python
-pillow
-ipykernel

@@ -5,7 +5,7 @@ Resolución del Trabajo Práctico N° 1:
 - **Problema 1: Ecualización local de histograma** (`TP1.py`)
 - **Problema 2: Validación de planillas de calificaciones** (`TP1b.py`)
 
-El informe completo, con el análisis y los resultados, está en [`informe/Informe_TP1_PDI.pdf`](informe/Informe_TP1_PDI.pdf). La versión editable es el `.docx` de la misma carpeta.
+El informe completo, con el análisis y los resultados, está en [`informe/Informe_TP1_PDI.pdf`](informe/Informe_TP1_PDI.pdf).
 
 ## Integrantes
 
@@ -15,39 +15,49 @@ El informe completo, con el análisis y los resultados, está en [`informe/Infor
 
 ## Requisitos
 
-Python 3.10 o superior.
+Versiones con las que se desarrolló y probó el trabajo:
+
+| Software | Versión |
+|---|---|
+| Python | 3.14.2 |
+| opencv-contrib-python | 5.0.0 |
+| numpy | 2.5.3 |
+| matplotlib | 3.11.2 |
+
+Instalación en un entorno virtual:
 
 ```bash
 python -m venv venv
 # Windows
 venv\Scripts\activate
-# Linux / macOS
-source venv/bin/activate
 
-pip install -r requirements.txt
+pip install opencv-contrib-python==5.0.0.93 numpy==2.5.3 matplotlib==3.11.2
 ```
 
 ## Estructura
 
 ```
 .
-├── TP1.py                              # Problema 1
-├── TP1b.py                             # Problema 2
-├── Imagen_con_detalles_escondidos.tif  # imagen de entrada del Problema 1
-├── grade_sheet_1.png ... grade_sheet_4.png  # planillas de entrada del Problema 2
-├── grade_sheet_empty.png               # planilla vacía de referencia
-├── resultados_1.csv ... resultados_4.csv        # salida del Problema 2, punto c (generados por TP1b.py)
-├── no_aprobados_1.png ... no_aprobados_4.png    # salida del Problema 2, punto b (generados por TP1b.py)
-├── requirements.txt
+├── TP1.py                        # Problema 1
+├── TP1b.py                       # Problema 2
+├── Imagen_con_detalles_escondidos.tif           # imagen de entrada del Problema 1
+├── grade_sheet_1.png ... grade_sheet_4.png      # planillas de entrada del Problema 2
+├── README.md
+├── TUIA_PDI_TP1_2026_C2.pdf      # enunciado del TP
 └── informe/
-    ├── Informe_TP1_PDI.pdf
-    ├── Informe_TP1_PDI.docx
-    └── img/                            # figuras del informe
+    └── Informe_TP1_PDI.pdf       # informe
 ```
+
+## Imágenes de entrada
+
+Las imágenes de entrada provistas por la cátedra están en la carpeta raíz del repositorio, junto a los scripts:
+
+- Problema 1: `Imagen_con_detalles_escondidos.tif`
+- Problema 2: `grade_sheet_1.png`, `grade_sheet_2.png`, `grade_sheet_3.png` y `grade_sheet_4.png`
 
 ## Ejecución
 
-Ejecutar los scripts desde la carpeta raíz del repositorio, porque las imágenes se leen con rutas relativas.
+Ejecutar los scripts desde la carpeta raíz del repositorio, porque las imágenes se leen con rutas relativas. Los archivos de salida del Problema 2 se generan en esa misma carpeta al correr el script.
 
 ### Problema 1
 
@@ -55,10 +65,11 @@ Ejecutar los scripts desde la carpeta raíz del repositorio, porque las imágene
 python TP1.py
 ```
 
-El script muestra dos figuras:
+El script muestra tres figuras (hay que cerrar cada ventana para que siga):
 
-1. La imagen original, la ecualización global y la ecualización local con una ventana de 15×15. En la local se ven los detalles ocultos: un cuadrado, una línea diagonal, la letra "a", líneas horizontales y un círculo.
-2. La ecualización local con ventanas de 3×3, 15×15, 31×31, 71×71, 215×215, 7×45 y 45×7.
+1. La imagen original.
+2. La imagen original, la ecualización global y la ecualización local con una ventana de 15×15. En la local se ven los detalles ocultos: un cuadrado, una línea diagonal, la letra "a", líneas horizontales y un círculo.
+3. La ecualización local con ventanas de 3×3, 15×15, 31×31, 71×71, 215×215, 7×45 y 45×7.
 
 La función principal es `ecualizacion_local(imagen, M, N)`. M y N deben ser enteros positivos. La ventana de 215×215 tarda unos segundos.
 
