@@ -66,7 +66,7 @@ Detalles ocultos encontrados (ventana 15x15):
  - Cuadrado superior izquierdo: un cuadrado más pequeño en su interior.
  - Cuadrado superior derecho: una línea diagonal.
  - Cuadrado central: la letra "a".
- - Cuadrado inferior izquierdo: varias líneas horizontales.
+ - Cuadrado inferior izquierdo: cuatro líneas horizontales.
  - Cuadrado inferior derecho: un círculo.
 La ecualización global no los revela porque el histograma se calcula sobre toda la imagen,
 dominada por el fondo claro; los detalles tienen intensidades muy parecidas a su fondo local
@@ -92,7 +92,7 @@ Conclusiones:
    angosta) las líneas horizontales casi desaparecen y el círculo queda con un gradiente;
    con 7x45 las líneas se ven, pero con intensidades desiguales. Como los detalles no tienen
    una orientación preferente, conviene una ventana cuadrada.
- - Costo computacional: crece con M*N (215x215 tarda unas 50 veces más que 15x15).
+ - Costo computacional: crece con M*N (215x215 tarda bastante más que 15x15).
 En resumen, el tamaño de ventana debe ser comparable o menor al tamaño de las regiones que
 contienen los detalles, pero no tan chico como para que domine el ruido.
 '''
