@@ -1,4 +1,4 @@
-# TP1 – Procesamiento de Imágenes I (TUIA – UNR, 2026 2° semestre)
+# TP1 – Procesamiento de Imágenes I (TUIA – UNR, 2026)
 
 Resolución del Trabajo Práctico N° 1:
 
